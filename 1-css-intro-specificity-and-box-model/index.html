@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prvi cas CSS-a</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- ! kod ispod vezan je za 2. nacin primene CSS stilova -->
+    <!-- <style>
+        h1 {
+           color: blue;
+           font-weight: bolder;
+        }
+    </style> -->
+</head>
+<body>
+    <main>
+        <div class="specificity-intro">
+
+            <!-- ! 1. nacin dodavanja CSS stilova elementima-->
+            <!-- ! IZBEGAVATI INLINE STYLE TAG -->
+            <h1 style="color: rgb(85, 158, 85); font-size: 50px;">Testing inline styles</h1>
+
+            <!-- ! 2. nacin dodavanja CSS stilova elementima -> kroz style tag u header elementu -->
+            <div class="my-wrapper">
+                <h1>Testing style tag in head element</h1>
+            </div>
+
+            <!-- ! 3. nacin dodavanja CSS stilova elementima -->
+            <h1 class="my-heading">Testing class selector styling</h1>
+
+            <h3 class="my-heading custom-heading">My h3 heading</h3>
+
+            <button disabled>
+                Testing Attribute Selector 1
+            </button>
+
+            <button disabled>
+                Testing Attribute Selector 2
+            </button>
+
+            <button disabled>
+                Testing Attribute Selector 3
+            </button>
+
+            <button disabled class="special-disabled-btn">
+                Testing Attribute Selector 4
+            </button>
+
+            <!-- ! 4. nacin dodavanja CSS stilova elementima -->
+            <!-- * U praksi gledajte da izbegavate stilizaciju putem ID-a. Umesto toga koristite class selektor. -->
+            <p id="my-text-1" style="color: green">Lorem ipsum dolor sit amet.</p>
+
+            <p id="my-text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, amet?</p>
+
+            <!-- ! 5. nacin primene stilova - kroz univerzalni selektor (*) -->
+
+            <hr>
+            
+            <!-- ! Hijerarhija primene stilova (specificity) -->
+            <h1>Zakljucak:</h1>
+            <p>Od dna ka vrhu hijerarhija primene CSS stilova kroz razlicite tipove selektora</p>
+            <ol>
+                <li>Element selektori (h1, p, div, header, itd...) i pseudo-elementi (::after, ::before)</li>
+                <li>Class selektori (.my-wrapper, .custom-btn, itd...), pseudo-klase (:pseudo-class) i attribute selektori ([disabled])</li>
+                <li>ID selektori (#my-text-1)</li>
+                <li>Inline styles</li>
+            </ol>
+
+        </div>
+    </main>
+</body>
+</html>

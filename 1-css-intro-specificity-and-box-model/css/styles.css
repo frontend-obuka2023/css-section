@@ -1,0 +1,46 @@
+/* ! CSS stilovi se primenjuju odozgo na dole */
+
+/* * {
+    background-color: blueviolet;
+} */
+
+/* * primer element selector-a */
+h1 {
+    color: blueviolet;
+}
+
+/* * primer class selector-a (mora imati TACKU kao prefix) */
+.my-heading {
+    color: blue;
+}
+
+.custom-heading {
+    color: #dd3300;
+    font-style: italic;
+}
+
+.my-wrapper {
+    background-color: rgb(226, 226, 133);
+}
+
+/* * primer attribute selector-a */
+[disabled] {
+    color: red;
+    background-color: blueviolet;
+}
+
+.special-disabled-btn {
+    color: rgb(128, 160, 12);
+    background-color: aqua;
+}
+
+/* * primer ID selector-a (mora imati # kao prefix) */
+#my-text-1,
+#my-text-2 {
+    color: rgb(94, 61, 1);
+    font-size: 17px;
+}
+
+p {
+    color: blue;
+}
