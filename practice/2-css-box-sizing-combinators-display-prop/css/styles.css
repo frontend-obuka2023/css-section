@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box; /* TODO Ovaj property definise nacin na koji kalkulisemo visinu i sirinu elemenata */
+}
+
+.wrapper-one {
+    /* box-sizing: content-box; */ /* ! Default nacin kalkulacije visine i sirine elementa */
+    width: 300px;
+    height: 100px;
+    padding: 50px; /* ! Shorthand property --> padding od 50 px se dodaje sa gornje, desne, donje i leve strane elementa */
+    /* ! Umesto donje 4 linije koda, mozemo svaku stranu aplicirati padding linijom koda od gore  */
+    /* padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px; */
+    /* margin: 100px; */ /* ! Shorthand property (skracenica) */
+    margin-bottom: 100px;
+    border: 10px solid black;
+    /* border-style: solid;
+    border-width: 10px;
+    border-color: black; */
+    background-color: aqua;
+}
+
+.wrapper-two {
+    /* box-sizing: border-box; */
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 10px solid black;
+    background-color: greenyellow;
+}
+
+/* ! Combinators */
+/* TODO Descendant (potomak) kombinator - najcesce koriscen - kombinator koji gadja SVE potomke prvobitno napisanog selektora (bez obzira da li su mu deca, unuci, itd). */
+
+/* .my-wrapper p {
+    color: red;
+} */
+
+/* TODO Child kombinator - kombinator koji gadja samo direktnu decu od prvobitno napisanog selektora */
+
+/* .my-wrapper > p {
+    color: blue;
+} */
+
+/* TODO Next sibling kombinator - kombinator koji gadja samo prvi naredni element od prvobitno napisanog selektora */
+/* .first-title + p {
+    color: orange;
+} */
+
+/* TODO Subsequent sibling kombinator - kombinator koji gadja SVE naredne elemente (NAKON) od prvobitno napisanog selektora koji su na istom nivou kao prvobitno napisani selektor */
+.first-title ~ p {
+    color: purple;
+}
+
+
+/* ! Display property */
+
+.example-div {
+    /* display: block */ /* Ukljucen iako nismo specificirali jer su elementi tipa BLOCK LEVEL elementi */
+    background-color: aquamarine;
+    width: 50%;
+    height: 200px;
+}
+
+/* Pravilo ispod nema nikakvog efekta jer su u pitanju INLINE LEVEL elementi (<a>) */
+.moj-link {
+    /* display: inline */ /* Ukljucen iako nismo specificirali jer su elementi tipa INLINE LEVEL elementi */
+    background-color: palegreen;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.moj-link-2 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+}
+
+/* display: none skriva element sa stranice (i ne rezervise njegovu visinu i sirinu uopste), DOK visibility: hidden samo sakriva element ali i dalje ostavlja ucitanu visinu i sirinu elementa */
+.hide-me {
+    /* display: none; */
+    visibility: hidden;
+}
