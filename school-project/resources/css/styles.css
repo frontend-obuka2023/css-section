@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Source+Code+Pro&display=swap');
+
+/*
+font-family: 'Courier Prime', monospace;
+font-family: 'Source Code Pro', monospace;
+*/
+
+* {
+    /* box-sizing: border-box; */
+}
+
+body {
+    margin: 0;
+    background-color: #fef9f8;
+}
+
+.main-header {
+   border-top: 10px solid #ef9273;
+   border-bottom: 5px solid #fff;
+   padding: 20px;
+}
+
+.main-header__logo-wrapper {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bolder;
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle; /* ! Vertikalno poravnanje svih item-a u okviru elementa */
+    width: calc(100% - 510px); /* ! Kalkulacija sirine (oduzimanje 510 px od maximalne raspolozive sirine) */
+}
+
+.main-header__logo-wrapper a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-header__main-nav {
+    display: inline-block;
+    vertical-align: middle; /* ! Vertikalno poravnanje svih item-a u okviru elementa */
+}
+
+.main-header__main-nav-list {
+    list-style-type: none; /* ! Otklanja bullet-e sa komplet liste (tacke, brojeve, itd.) */
+    padding: 0;
+    margin: 0;
+}
+
+.main-header__main-nav-list-item {
+    display: inline-block;
+}
+
+.main-header__main-nav-list-item a {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.main-header__main-nav-list-item a:hover,
+.main-header__main-nav-list-item a:active {
+    color: #fef9f8;
+    background: #ef9273;
+    border-radius: 40px;
+}

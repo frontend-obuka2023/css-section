@@ -1,0 +1,31 @@
+.important-wrapper .my-p {
+    color: red !important;
+}
+
+.important-wrapper .my-custom-p {
+    color: green;
+}
+
+/* ! Important flag koristitie kada uvek, bez obzira na bilo sta drugo, odredjeno CSS pravilo nad nekim elementom (elementima) zelite da primenite! */
+
+
+.pseudo-wrapper a {
+    color: red;
+}
+
+.pseudo-wrapper a:hover {
+    color: lightgreen;
+    background-color: purple;
+    /* display: inline-block;
+    width: 200px;
+    height: 150px;
+    background-color: aquamarine; */
+}
+
+.pseudo-wrapper .name-input {
+    background-color: rgb(198, 198, 228);
+}
+
+.pseudo-wrapper .name-input:focus {
+    background-color: rgb(69, 69, 250);
+}
