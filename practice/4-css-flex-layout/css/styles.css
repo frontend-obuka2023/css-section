@@ -1,0 +1,33 @@
+/* Flex container */
+.main-wrapper {
+    display: flex;
+    /* flex-direction: row */ /* ! default vrednost za flex-direction je ROW */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */ /* ! default vrednost za flex-wrap je nowrap (dakle nece padati u novi red flex itemi) */
+    /* flex-wrap: nowrap; */
+    flex-flow: row wrap;
+    justify-content: center; /* ! Justify-content je atribut kojim podesavate poziciju elemenata u odnosu na X osu */
+    align-items: flex-start; /* ! Align-items je atribut kojim podesavate poziciju elemenata u odnosu na Y osu */
+}
+
+/* Flex itemi */
+.box-num-1,
+.box-num-2,
+.box-num-3 {
+    border: 1px solid black;
+    background-color: aquamarine;
+    width: 400px;
+}
+
+/* Sada flex item postaje flex container za sebe */
+.box-num-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-basis: 70%; */ /* ! ovaj atribut se moze koristiti samo nad flex-itemom, i definise njegovu sirinu */
+}
+
+.box-num-2 {
+    /* order: 1; */ /* ! ovaj atribut se moze koirsititi samo nad flex itemom i on definise njegovu poziciju unutar flex container-a */
+    /* flex-grow: 3; */ /* ! Flex grow moze da definise koliko ce procentualno da se element siri u odnosu na ostale u odnosu na celokupnu raspolozivu sirinu */
+}

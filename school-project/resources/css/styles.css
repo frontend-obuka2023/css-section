@@ -18,6 +18,12 @@ body {
    border-top: 10px solid #ef9273;
    border-bottom: 5px solid #fff;
    padding: 20px;
+   display: flex;
+   /* flex-direction: row;
+   flex-wrap: wrap; */
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
 }
 
 .main-header__logo-wrapper {
@@ -43,6 +49,11 @@ body {
     list-style-type: none; /* ! Otklanja bullet-e sa komplet liste (tacke, brojeve, itd.) */
     padding: 0;
     margin: 0;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .main-header__main-nav-list-item {
