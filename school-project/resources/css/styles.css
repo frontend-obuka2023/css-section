@@ -74,3 +74,104 @@ body {
     background: #ef9273;
     border-radius: 40px;
 }
+
+/* ! MAIN SECTION */
+
+.hero-wrapper {
+    font-family: 'Courier Prime', monospace;
+    height: 50vh;
+    padding: 20px;
+    background-image: url('../images/hero-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-wrapper p {
+    width: 50%;
+    font-style: italic;
+}
+
+.plans-wrapper {
+    width: 90%;
+    margin: 50px auto; /* za centriranje content-a */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Courier Prime', monospace;
+}
+
+.plans-wrapper__title {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 42px;
+}
+
+.plans-wrapper__article {
+    border: 3px solid black;
+    padding: 50px 35px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    min-width: 350px;
+    background: #e9baab;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-basis: 20%;
+    text-align: center;
+    max-height: 650px;
+}
+
+.advanced {
+    order: 1;
+    min-height: 600px;
+    background: #eb9a7f;
+}
+
+.intermediate {
+    order: 2;
+}
+
+.plans-wrapper__article h1:nth-child(1) {
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.plans-wrapper__article h1:nth-child(2) {
+    font-weight: bold;
+    font-size: 27px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.plans-wrapper__article h3 {
+    font-size: 23px;
+}
+
+.plans-wrapper__article ul {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 19px;
+    font-weight: bold;
+    list-style-type: none;
+    text-align: left;
+}
+
+.choose-plan__button-wrapper {
+    margin-top: 20px;
+}
+
+.choose-plan__button-wrapper button {
+    font-family: 'Courier Prime', monospace;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 19px;
+    background-color: #fef9f8;
+}
+
+.choose-plan__button-wrapper button:hover {
+    background-color: #ddd7d6;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
