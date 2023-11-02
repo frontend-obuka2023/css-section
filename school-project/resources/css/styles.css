@@ -40,6 +40,11 @@ body {
     color: black;
 }
 
+.main-header__logo-wrapper a img {
+    width: 60px;
+    height: 60px;
+}
+
 .main-header__main-nav {
     display: inline-block;
     vertical-align: middle; /* ! Vertikalno poravnanje svih item-a u okviru elementa */
@@ -79,15 +84,21 @@ body {
 
 .hero-wrapper {
     font-family: 'Courier Prime', monospace;
-    height: 50vh;
+    height: 70vh;
     padding: 20px;
     background-image: url('../images/hero-image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.hero-wrapper h1 {
+    letter-spacing: 5px; /* definisanje razmaka izmedju slova */
+    text-shadow: 2px 2px 1px #eb9a7f; /* text-shadow je shorthand property koji prihvata redosledno: senku po X osi, senku po Y osi, blur (zamagljenje), boja */
+}
+
 .hero-wrapper p {
     width: 50%;
+    letter-spacing: 2px;
     font-style: italic;
 }
 
@@ -120,6 +131,7 @@ body {
     flex-basis: 20%;
     text-align: center;
     max-height: 650px;
+    box-shadow: 5px 4px 5px 5px rgb(151, 150, 150);
 }
 
 .advanced {
@@ -130,6 +142,11 @@ body {
 
 .intermediate {
     order: 2;
+}
+
+.plans-wrapper__article h1 {
+    letter-spacing: 3px;
+    text-shadow: 3px 3px #ddd7d6;
 }
 
 .plans-wrapper__article h1:nth-child(1) {
@@ -143,6 +160,11 @@ body {
     font-size: 27px;
     text-decoration: underline;
     text-underline-offset: 6px;
+}
+
+.plans-wrapper__article h2,
+.plans-wrapper__article h3 {
+    text-shadow: 3px 3px 3px #ddd7d6;
 }
 
 .plans-wrapper__article h3 {
@@ -174,4 +196,158 @@ body {
     background-color: #ddd7d6;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+}
+
+.about-wrapper {
+    margin-top: 100px;
+    padding: 50px 0;
+    background-color: #eb9a7f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-wrapper__title {
+    font-family: 'Courier Prime', monospace;
+    font-size: 45px;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 3px #ddd7d6;
+}
+
+.about-wrapper__text {
+    width: 50%;
+    font-family: 'Courier Prime', monospace;
+    font-size: 22px;
+    text-shadow: 1px 1px 3px #ddd7d6;
+    text-align: justify;
+}
+
+.about-wrapper__text p {
+    line-height: 1.5;
+}
+
+.about-wrapper__founders {
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-wrapper__founders-card {
+    flex-basis: 550px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-wrapper__founders-card img {
+    border: 3px solid #e9baab;
+    border-radius: 25px;
+    box-shadow: 5px 4px 5px 5px rgb(54, 54, 54);
+}
+
+.about-wrapper__founders-card h1,
+.about-wrapper__founders-card h3,
+.about-wrapper__founders-card p {
+    font-family: 'Source Code Pro', monospace;
+}
+
+.about-wrapper__founders-card h1 {
+    font-size: 35px;
+    text-shadow: 2px 2px #ddd7d6;
+}
+
+.about-wrapper__founders-card h3 {
+    font-size: 25px;
+    text-shadow: 3px 3px 3px #ddd7d6;
+}
+
+.about-wrapper__founders-card p {
+    width: 75%;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px #ddd7d6;
+}
+
+/* ! FOOTER SECTION */
+
+.main-footer {
+    border-top: 3px solid white;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-footer__nav {
+    width: 20%;
+}
+
+.main-footer__nav-list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.main-footer__nav-list li a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.main-footer__nav-list li a:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px #ddd7d6;
+    font-size: 18.5px;
+    transition: 0.3s ease-in-out;
+}
+
+.main-footer__nav-social-icons {
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 35px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Linkedin */
+.fa-linkedin {
+    background: #0A66C2;
+    color: white;
 }
