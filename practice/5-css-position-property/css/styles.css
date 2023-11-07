@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* margin: 0; */
+    padding: 0;
+}
+
+/*
+ Position property moze imati vrednosti:
+ 1. Static (po default-u vazi za svaki element)
+ 2. Relative
+ 3. Absolute
+ 4. Fixed
+ 5. Sticky
+*/
+
+header {
+    background-color: purple;
+    /* position: fixed; */ /* * uz position: fixed element ce biti nakacen i fixiran u odnosu na offset i pratice vas tokom skrolovanja vertikalnog/horizontalnog */
+    /* top: 0;
+    left: 0; */
+    /* position: sticky; */
+    /* top: 150px; */
+    width: 100%;
+}
+
+.main-wrapper {
+    background-color: tomato;
+    height: 200vh;
+    /* position: static; */ /* * default vrednost za position property je static */
+    /* position: relative; */ /* * position: relative ce u skladu sa offset vrednostima koje napisete da element pomeri od pocetne pozicije (tacke gore levo) za zadati offset */
+    /* Offset properties: TOP , LEFT , BOTTOM , RIGHT */
+    /* top: 200px;
+    left: 200px; */
+}
+
+/*
+    Position: absolute narusava flow dokumenta, jer se element ponasa "kako on zeli" , odnosno izlazi van flow-a kompletnog dokuemnta.
+    Ovo ponasanje moze se ograniciti primenom position: relative na parent element elementa koji ima position: absolute
+*/
+
+.div-1 {
+    background-color: green;
+    height: 500px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+}
+
+.div-2 {
+    position: relative;
+    z-index: 2;
+}
+
+.div-3 {
+    z-index: 0;
+}
+
+/*
+ Position: sticky se ponasa kao kombinacija relative i fixed position-a. To znaci da kad se stranica ucita element je na svom mestu (kao da ima relative position),
+ ali kad krenemo da skrolujemo i dodjemo do limita (vrednosti) zadaate npr top offset-om za taj element, onda ce element postati fiksiran u tom offset iznosu
+*/
+
+.sticky-div {
+    position: sticky;
+    top: 30px;
+    background-color: aquamarine;
+    padding: 50px;
+    font-size: 20px;
+}
