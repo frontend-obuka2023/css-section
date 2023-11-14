@@ -1,0 +1,37 @@
+div {
+    width: 700px;
+    height: 700px;
+    margin: 50px auto;
+    border: 1px solid black;
+    /* ! Background gradient-i */
+    /* background: linear-gradient(blue, purple, yellow); */
+    /* background: radial-gradient(blue, purple, yellow); */
+
+    /* ! Background slike */
+    /* TODO 1. background-repeat */
+    background: url('../images/founder-1.png');
+    background-repeat: repeat; /* default ponavlja sliku u svim pravcima */
+    background-repeat: no-repeat; /* zabranjuje ponavljanje slike */
+    /* background-repeat: repeat-x;
+    background-repeat: repeat-y; */
+
+    /* TODO 2. background-size */
+    /* background-size: 200px; */ /* ! direktno hard-kodovanje vrednosti se retko koristi, kao sto je npr u ovoj linij */
+    /* background-size: contain;  */
+    background-size: cover;
+
+    /* TODO 3. background-position */
+    background-position: center;
+
+    /* TODO 4. background-attachment */
+    background-attachment: scroll;
+    background-attachment: fixed;
+
+    /* TODO 5. background-clip */
+    background: rgb(211, 211, 238);
+    border: 5px dotted red;
+    padding: 20px;
+    background-clip: border-box; /* definise da se background prostire do krajnjih granica border-a */
+    background-clip: content-box; /* definise da se background prostire do pocetnih granica padding-a */
+    background-clip: padding-box; /* definise da se background prostire do krajnjih granica padding-a */
+}

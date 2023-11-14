@@ -1,1 +1,71 @@
 @import url('./shared.css');
+
+.courses-wrapper {
+    background: url('../images/courses-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    opacity: 0.8; /* definise prozirnost elementa (ili u procentima npr 80 % ili 0.8) */
+    display: flex;
+    flex-direction: column;
+}
+
+.courses-wrapper__course {
+    border: 5px solid #ef9273;
+    width: 50%;
+    background-color: #fef9f9;
+    padding: 25px;
+    margin-bottom: 20px;
+    opacity: 85%;
+    min-width: 300px;
+    min-height: 250px;
+    position: relative;
+    z-index: 1;
+}
+
+.courses-wrapper__course:hover {
+    cursor: pointer;
+    border-color: #e9683d;
+    transition: 0.3 ease;
+}
+
+.advanced-course {
+    order: 1;
+}
+
+.intermediate-course {
+    order: 2;
+    align-self: flex-end;
+}
+
+.basic-course {
+    order: 3;
+}
+
+.courses-wrapper__course h3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Courier Prime', monospace;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #ec7f5a;
+    padding: 5px;
+    z-index: -1;
+}
+
+.courses-wrapper__course h1 {
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+.courses-wrapper__course ul,p {
+    font-size: 15px;
+    font-family: 'Courier Prime', monospace;
+}
