@@ -69,3 +69,41 @@
     font-size: 15px;
     font-family: 'Courier Prime', monospace;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .courses-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .intermediate-course {
+        align-self: center;
+    }
+
+    .courses-wrapper__course {
+        text-align: center;
+    }
+
+    .courses-wrapper__course ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .courses-wrapper__course ul li {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .courses-wrapper__course h3 {
+        position: static;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1400px) {
+    .courses-wrapper__course h3 {
+        position: static;
+        text-align: center;
+    }
+}

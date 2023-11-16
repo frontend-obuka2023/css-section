@@ -131,6 +131,9 @@ body {
 }
 
 .fa {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     font-size: 35px;
     width: 20px;
@@ -160,4 +163,14 @@ body {
 .fa-linkedin {
     background: #0A66C2;
     color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-footer__nav {
+        width: 80%;
+    }
+
+    .main-footer__nav-list {
+        justify-content: space-evenly;
+    }
 }

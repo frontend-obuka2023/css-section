@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/css/enrollment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Enrollment</title>
+</head>
+<body>
+    <!-- ! Header -->
+    <header class="main-header">
+        <div class="main-header__logo-wrapper">
+            <a href="../index.html">
+                <img src="../resources/images/logo.png" alt="Company Logo">
+            </a>
+        </div>
+        <nav class="main-header__main-nav">
+            <ul class="main-header__main-nav-list">
+                <li class="main-header__main-nav-list-item">
+                    <a href="./courses.html">Courses</a>
+                </li>
+                <li class="main-header__main-nav-list-item">
+                    <a href="#">Our Team</a>
+                </li>
+                <li class="main-header__main-nav-list-item">
+                    <a href="enrollment.html">Enrollment</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ! Form -->
+    <main>
+        <div class="form-wrapper">
+            <form class="form-wrapper__form" name="enrollment-form">
+                <h3>Enroll for one of our courses</h3>
+                <label class="required" for="firstName">
+                    First Name
+                </label>
+                <input type="text">
+                <label class="required" for="lastName">
+                    Last Name
+                </label>
+                <input type="text">
+                <label class="required" for="email">
+                    Email
+                </label>
+                <input type="email">
+                <label for="courseCbx">
+                    Choose course
+                </label>
+                <select name="courseCbx" id="courseCbx">
+                    <option value="basic">Basic</option>
+                    <option value="intermmediate">Intermmediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <label for="message">
+                    Additional message
+                </label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </main>
+    <!-- ! Footer -->
+    <footer class="main-footer">
+        <nav class="main-footer__nav">
+            <section class="main-footer__nav-social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </section>
+            <ul class="main-footer__nav-list">
+                <li>
+                    <a href="#">
+                        Support
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Terms of Use
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
