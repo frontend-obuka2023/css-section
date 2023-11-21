@@ -1,0 +1,79 @@
+/* ! podsetnik na pseudo-klase */
+/* .elements-wrapper {
+    height: 20vh;
+    background-color: red;
+}
+
+.elements-wrapper:hover {
+    cursor: pointer;
+    background-color: blue;
+} */
+
+.elements-wrapper {
+    text-align: center;
+}
+
+/* ! Pseudo elementi */
+.before-element::before {
+    content: '(*) '; /* content je css atribut koji se koristi uvek u kombinaciji npr before ili after pseudo-elementa */
+    color: red;
+    font-weight: bolder;
+}
+
+.after-element::after {
+    content: ' ?!';
+    color: green;
+    font-weight: bolder;
+}
+
+/* ! before i after su pogodni kada morate kroz CSS da stilizujete pocetak ili kraj nekog elementa */
+
+.first-letter-p::first-letter {
+    font-size: 40px;
+    color: #dd3300;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.first-line-p::first-line {
+    color: green;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.my-list li::marker {
+    content: '⭐ ';
+}
+
+/* 
+.my-list {
+    list-style-type: none !important;
+} */
+
+.my-input::placeholder {
+    color: #dd3300;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.selection-text::selection {
+    color: green;
+    background-color: #dfcfcb;
+    font-weight: bolder;
+}
+
+/* TODO Primer dodavanja tooltip-a (pomocnog teksta) na hover efekat */
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip); /* ovde uz attr funkciju hocemo da vratimo vrednost koja se krije u atributu data-tooltip */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #dd3300;
+}

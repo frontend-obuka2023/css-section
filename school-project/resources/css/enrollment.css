@@ -65,19 +65,22 @@
 
 .form-wrapper__form button {
     margin-top: 20px;
-    background: #eb9a7f;
-    border: 3px solid black;
+    background: #e9baab;
+    border: 3px solid #eb7851;
     border-radius: 15px;
     padding: 20px;
     font-family: 'Source Code Pro', monospace;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    text-shadow: 1px 1px black;
+    color:#e98462;
+    font-weight: bolder;
 }
 
 .form-wrapper__form button:hover {
     cursor: pointer;
-    background: #e9baab;
+    background: #eb9a7f;
     transition: 0.3s ease;
 }
 

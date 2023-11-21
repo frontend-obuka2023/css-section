@@ -1,0 +1,122 @@
+@import url('./shared.css');
+@import url('./enrollment.css');
+
+main {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: linear-gradient(135deg, #ec9f85 10%, #e9baab);
+}
+
+.team-wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.team-title-wrapper {
+    text-align: center;
+    margin-top: 50px 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.team-title-wrapper__title {
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-shadow: 3px 3px 2px #d47675;
+}
+
+.team-wrapper__teacher {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.team-wrapper__teacher:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.team-wrapper__teacher-about {
+    width: 40%;
+}
+
+.team-wrapper__teacher-about-icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.team-wrapper__teacher-about h1, h3 {
+    text-shadow: 4px 4px 4px #d47675;
+}
+
+.team-wrapper__teacher-about p {
+    font-family: 'Courier Prime', monospace;
+    text-shadow: 2px 2px 3px #d47675;
+}
+
+.fa-pinterest {
+    background: #E60023;
+    color: white;
+}
+
+.form-wrapper {
+    background: none;
+    width: 50%;
+    margin: 0 auto;
+}
+.form-wrapper__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper__form p {
+    width: 70%;
+    margin-bottom: 30px;
+}
+.form-wrapper__form label {
+    align-self: flex-start;
+}
+.form-wrapper__form h3 {
+    color: black;
+    text-shadow: 3px 3px #eb9a7f;
+}
+
+@media screen and (max-width: 768px) {
+    .team-wrapper {
+        width: 90%;
+    }
+    .team-wrapper__teacher {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .team-wrapper__teacher-img img {
+        width: 100%;
+        box-shadow: 6px 6px 5px black;
+    }
+    .team-wrapper__teacher:nth-child(odd) {
+        text-align: left;
+    }
+    .team-wrapper__teacher:nth-child(even) {
+        text-align: right;
+    }
+    .form-wrapper {
+        background: none;
+    }
+    .form-wrapper__form p {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .form-wrapper__form label {
+        text-shadow: 2px 2px #eb9a7f;
+        color: black;
+    }
+    .form-wrapper__form h3 {
+        color: black;
+        text-shadow: 3px 3px #eb9a7f;
+    }
+}
