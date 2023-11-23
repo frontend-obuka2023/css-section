@@ -1,0 +1,8 @@
+// ! I mixini se imenuju camelCase formatom
+@mixin displayFlexMixin($justifyContentParam, $flexDirectionParam) {
+    display: flex;
+    flex-direction: $flexDirectionParam;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: $justifyContentParam;
+}

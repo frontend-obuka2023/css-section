@@ -1,0 +1,43 @@
+@import './variables';
+@import './header';
+@import './mixins';
+
+.first-div {
+    background: rgb(231, 181, 181);
+    height: 400px;
+    @include displayFlexMixin(center, row);
+    h1 {
+        color: $orangeDark;
+
+        span {
+            font-style: italic;
+            color: green;
+        }
+
+    }
+
+    &:hover {
+        background-color: aquamarine;
+        cursor: pointer;
+        transition: 0.3s ease;
+    } 
+
+    @media screen and (max-width: $tabletSize) {
+        background: pink !important;
+    }
+
+}
+
+.second-div {
+    @extend .first-div;  // Nasledjujemo ponasanje .first-div kontejnera
+    background: lightgreen; // Override-ujemo (pregazimo) ponasanje .first-div kontejnera kada je u pitanju background boja
+
+    // Operacije mogu biti: + , - , * , /
+    height: 400px*2;
+    width: 100%*0.5;
+}
+
+.my-text {
+    color: $orangeDark;
+    font-size: $mediumSizeFont;
+}

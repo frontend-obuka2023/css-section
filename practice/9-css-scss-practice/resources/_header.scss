@@ -1,0 +1,16 @@
+@import './variables';
+@import './mixins';
+
+header {
+    nav {
+        background-color: $purpleBackground;
+        ul {
+            list-style-type: none;
+            @include displayFlexMixin(space-between, row-reverse);
+            li {
+                color: yellow;
+                font-size: $mediumSizeFont;
+            }
+        }
+    }
+}

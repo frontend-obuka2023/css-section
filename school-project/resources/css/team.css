@@ -32,8 +32,8 @@ main {
     margin-bottom: 80px;
 }
 
+/* ! za svaki PARNI teacher artikl hocu da se obrne redosled elemenata (prvo tekst pa slika) */
 .team-wrapper__teacher:nth-child(even) {
-    display: flex;
     flex-direction: row-reverse;
 }
 
@@ -66,10 +66,6 @@ main {
     background: none;
     width: 50%;
     margin: 0 auto;
-}
-.form-wrapper__form {
-    display: flex;
-    flex-direction: column;
 }
 
 .form-wrapper__form p {
@@ -106,6 +102,10 @@ main {
     }
     .form-wrapper {
         background: none;
+        width: 90%;
+    }
+    .form-wrapper__form {
+        width: 100%;
     }
     .form-wrapper__form p {
         width: 80%;

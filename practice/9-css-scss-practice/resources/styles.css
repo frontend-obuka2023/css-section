@@ -1,0 +1,53 @@
+header nav {
+  background-color: purple;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul li {
+  color: yellow;
+  font-size: 20px;
+}
+
+.first-div, .second-div {
+  background: rgb(231, 181, 181);
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.first-div h1, .second-div h1 {
+  color: #dd3300;
+}
+.first-div h1 span, .second-div h1 span {
+  font-style: italic;
+  color: green;
+}
+.first-div:hover, .second-div:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .first-div, .second-div {
+    background: pink !important;
+  }
+}
+
+.second-div {
+  background: lightgreen;
+  height: 800px;
+  width: 50%;
+}
+
+.my-text {
+  color: #dd3300;
+  font-size: 20px;
+}/*# sourceMappingURL=styles.css.map */
