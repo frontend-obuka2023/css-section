@@ -1,0 +1,117 @@
+@import './shared';
+
+.courses-wrapper {
+    background: url('../images/courses-image.jpg');
+    background: {
+        repeat: no-repeat;
+        size: cover;
+    };
+    padding: 50px;
+    opacity: 0.8;
+    @include displayFlexMixin(column, null, null, null);
+
+    &__course {
+        border: 5px solid $headerTopBorder;
+        width: 50%;
+        background-color: #fef9f9;
+        padding: 25px;
+        margin-bottom: 20px;
+        opacity: 85%;
+        min-width: 300px;
+        min-height: 250px;
+        position: relative;
+        z-index: 1;
+
+        h3 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: $courierPrimeFont;
+            text-transform: uppercase;
+            font-size: 20px;
+            border: 1px solid $plainBlackColor;
+            border-radius: 10px;
+            background-color: #ec7f5a;
+            padding: 5px;
+            z-index: -1;
+
+            @media only screen and (max-width: $mobileSize) {
+                position: static;
+            }
+
+            @media only screen and (min-width: $mobileSize) and (max-width: $laptopSize) {
+                position: static;
+                text-align: center;
+            }
+        }
+
+        h1 {
+            font: {
+                family: $sourceCodeProFont;
+                size: 30px;
+            }
+            letter-spacing: 3px;
+            text: {
+                transform: uppercase;
+                align: center;
+            }
+            margin: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-color: #e9683d;
+            transition: $headerItemsTransition;
+        }
+
+        ul,p {
+            font: {
+                size: 15px;
+                family: 'Courier Prime', monospace;
+            }
+        }
+
+        ul {
+            @media only screen and (max-width: $mobileSize) {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 20px;
+            }
+            
+            li {
+                @media only screen and (max-width: $mobileSize) {
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: $mobileSize) {
+            text-align: center;
+        }
+
+    }
+
+    .advanced-course {
+        order: 1;
+    }
+    
+    .intermediate-course {
+        order: 2;
+        align-self: flex-end;
+
+        @media only screen and (max-width: $mobileSize) {
+            align-self: center;
+        }
+    }
+    
+    .basic-course {
+        order: 3;
+    }
+
+    @media only screen and (max-width: $mobileSize) {
+        justify-content: center;
+        align-items: center;
+    }
+
+}

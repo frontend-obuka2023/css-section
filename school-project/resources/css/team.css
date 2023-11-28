@@ -1,122 +1,391 @@
-@import url('./shared.css');
-@import url('./enrollment.css');
-
-main {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    background: linear-gradient(135deg, #ec9f85 10%, #e9baab);
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Source+Code+Pro&display=swap");
+* {
+  box-sizing: border-box;
 }
 
-.team-wrapper {
-    margin: 0 auto;
+body {
+  margin: 0;
+  background-color: #fef9f8;
+}
+
+/* ! Header */
+.main-header {
+  border-top: 10px solid #ef9273;
+  border-bottom: 5px solid #fff;
+  padding: 20px;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.main-header__logo-wrapper {
+  font-family: "Source Code Pro", monospace;
+  font-weight: bolder;
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 510px);
+}
+.main-header__logo-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+.main-header__logo-wrapper a img {
+  width: 60px;
+  height: 60px;
+}
+.main-header__main-nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-header__main-nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.main-header__main-nav-list-item {
+  display: inline-block;
+}
+.main-header__main-nav-list-item a {
+  font-family: "Source Code Pro", monospace;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  padding: 5px 20px;
+  transition: 0.2s ease-in-out;
+}
+.main-header__main-nav-list-item a:hover, .main-header__main-nav-list-item a:active {
+  color: #fef9f8;
+  background: #ef9273;
+  border-radius: 40px;
+  transition: 0.2s ease-in-out;
+}
+
+.main-footer {
+  border-top: 3px solid white;
+  height: 150px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.main-footer__nav {
+  width: 20%;
+}
+.main-footer__nav-list {
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 0;
+  margin: 15px 0;
+  list-style-type: none;
+}
+.main-footer__nav-list li a {
+  color: black;
+  font-size: 18px;
+  font-family: "Source Code Pro", monospace;
+  text-decoration: none;
+}
+.main-footer__nav-list li a:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #ddd7d6;
+  font-size: 18.5px;
+  transition: 0.2s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+  .main-footer__nav-list {
+    justify-content: space-evenly;
+  }
+}
+.main-footer__nav-social-icons {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  /* Twitter */
+  /* Linkedin */
+}
+.main-footer__nav-social-icons .fa {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+.main-footer__nav-social-icons .fa:hover {
+  opacity: 0.7;
+}
+.main-footer__nav-social-icons .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.main-footer__nav-social-icons .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.main-footer__nav-social-icons .fa-linkedin {
+  background: #0A66C2;
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .main-footer__nav {
     width: 80%;
-}
-
-.team-title-wrapper {
-    text-align: center;
-    margin-top: 50px 0;
-    font-family: 'Source Code Pro', monospace;
-}
-
-.team-title-wrapper__title {
-    margin-bottom: 40px;
-    font-size: 40px;
-    text-shadow: 3px 3px 2px #d47675;
-}
-
-.team-wrapper__teacher {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 80px;
-}
-
-/* ! za svaki PARNI teacher artikl hocu da se obrne redosled elemenata (prvo tekst pa slika) */
-.team-wrapper__teacher:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.team-wrapper__teacher-about {
-    width: 40%;
-}
-
-.team-wrapper__teacher-about-icons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.team-wrapper__teacher-about h1, h3 {
-    text-shadow: 4px 4px 4px #d47675;
-}
-
-.team-wrapper__teacher-about p {
-    font-family: 'Courier Prime', monospace;
-    text-shadow: 2px 2px 3px #d47675;
-}
-
-.fa-pinterest {
-    background: #E60023;
-    color: white;
+  }
 }
 
 .form-wrapper {
-    background: none;
-    width: 50%;
-    margin: 0 auto;
+  padding: 50px 0;
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/enrollment-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.form-wrapper__form p {
-    width: 70%;
-    margin-bottom: 30px;
-}
-.form-wrapper__form label {
-    align-self: flex-start;
+.form-wrapper__form {
+  display: flex !important;
+  flex-flow: column;
+  align-items: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 20px;
+  color: black;
+  padding: 5px;
 }
 .form-wrapper__form h3 {
-    color: black;
-    text-shadow: 3px 3px #eb9a7f;
+  width: 100%;
+  margin-bottom: 45px;
+  color: #eb9a7f;
+  font-weight: bolder;
+  font-size: 30px;
+  text-shadow: 3px 3px black;
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper__form h3 {
+    text-align: center;
+  }
+}
+.form-wrapper__form label, .form-wrapper__form input, .form-wrapper__form select, .form-wrapper__form textarea {
+  border: 3px solid #eb9a7f;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-family: "Courier Prime", monospace;
+  font-size: 20px;
+}
+.form-wrapper__form label {
+  text-shadow: 2px 2px black;
+  text-decoration: underline;
+  border: none;
+  text-underline-offset: 5px;
+  color: #eb9a7f;
+  font-weight: bolder;
+}
+.form-wrapper__form input, .form-wrapper__form select {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px #e9baab;
+}
+.form-wrapper__form textarea {
+  height: 250px;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  box-shadow: 3px 3px 3px #e9baab;
+}
+.form-wrapper__form textarea:focus,
+.form-wrapper__form select:focus,
+.form-wrapper__form input:focus {
+  outline: none;
+}
+.form-wrapper__form .required::before {
+  content: "*";
+  color: red;
+  font-weight: bolder;
+}
+.form-wrapper__form button {
+  margin-top: 20px;
+  background: #e9baab;
+  border: 3px solid #eb7851;
+  border-radius: 15px;
+  padding: 20px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
+  color: #e47753;
+}
+.form-wrapper__form button:hover {
+  cursor: pointer;
+  background: #eb9a7f;
+  transition: 0.2s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper__form {
+    width: 85%;
+  }
 }
 
-@media screen and (max-width: 768px) {
-    .team-wrapper {
-        width: 90%;
-    }
-    .team-wrapper__teacher {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50px;
-    }
-    .team-wrapper__teacher-img img {
-        width: 100%;
-        box-shadow: 6px 6px 5px black;
-    }
-    .team-wrapper__teacher:nth-child(odd) {
-        text-align: left;
-    }
-    .team-wrapper__teacher:nth-child(even) {
-        text-align: right;
-    }
-    .form-wrapper {
-        background: none;
-        width: 90%;
-    }
-    .form-wrapper__form {
-        width: 100%;
-    }
-    .form-wrapper__form p {
-        width: 80%;
-        margin-bottom: 30px;
-    }
-    .form-wrapper__form label {
-        text-shadow: 2px 2px #eb9a7f;
-        color: black;
-    }
-    .form-wrapper__form h3 {
-        color: black;
-        text-shadow: 3px 3px #eb9a7f;
-    }
+main {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: linear-gradient(135deg, #e9bbab 10%, #ecc8bc);
 }
+
+.team-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+.team-wrapper__teacher {
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+.team-wrapper__teacher:nth-child(even) {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher:nth-child(even) {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher:nth-child(odd) {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher-img img {
+    width: 100%;
+    box-shadow: 6px 6px 5px black;
+  }
+}
+.team-wrapper__teacher-about {
+  width: 40%;
+}
+.team-wrapper__teacher-about-icons {
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: stretch;
+  justify-content: center;
+}
+.team-wrapper__teacher-about-icons .fa-pinterest {
+  background: #E60023;
+  color: white;
+}
+.team-wrapper__teacher-about-icons .fa-linkedin {
+  background: white;
+}
+.team-wrapper__teacher-about-icons .fa-pinterest,
+.team-wrapper__teacher-about-icons .fa-linkedin {
+  width: 40px;
+  height: 40px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher-about .odd-icons {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher-about .even-icons {
+    justify-content: flex-end;
+  }
+}
+.team-wrapper__teacher-about h1, .team-wrapper__teacher-about h3 {
+  text-shadow: 4px 4px 4px #d47675;
+}
+.team-wrapper__teacher-about p {
+  font-family: "Courier Prime", monospace;
+  text-shadow: 2px 2px 3px #d47675;
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper__teacher-about {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-wrapper {
+    width: 90%;
+  }
+}
+
+.team-title-wrapper {
+  text-align: center;
+  margin-top: 50px 0;
+  font-family: "Source Code Pro", monospace;
+}
+.team-title-wrapper__title {
+  margin-bottom: 40px;
+  font-size: 40px;
+  text-shadow: 3px 3px 3px #ddd7d6;
+}
+
+.form-wrapper {
+  background: none;
+  width: 50%;
+  margin: 0 auto;
+}
+.form-wrapper p {
+  width: 70%;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper p {
+    width: 80%;
+  }
+}
+.form-wrapper label {
+  align-self: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper label {
+    text-shadow: 2px 2px #eb9a7f;
+    color: black;
+  }
+}
+.form-wrapper h3 {
+  color: black;
+  text-shadow: 3px 3px 3px #ddd7d6;
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper h3 {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper__form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    background: none;
+    width: 90%;
+  }
+}/*# sourceMappingURL=team.css.map */

@@ -1,0 +1,176 @@
+@import './variables';
+@import './mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $bodyBackgroundColor;
+}
+
+/* ! Header */
+
+.main-header {
+    border-top: 10px solid $headerTopBorder;
+    border-bottom: 5px solid #fff;
+    padding: 20px;
+    @include displayFlexMixin(null, wrap, center, center);
+
+    &__logo-wrapper {
+        font: {
+            family: $sourceCodeProFont;
+            weight: bolder;
+            size: 25px;
+        }
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(100% - 510px);
+
+        a {
+            text-decoration: none;
+            color: $plainBlackColor;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+        }
+
+    }
+
+    &__main-nav {
+        display: inline-block;
+        vertical-align: middle;
+
+        &-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            @include displayFlexMixin(null, wrap, space-between);
+
+            &-item {
+                display: inline-block;
+
+                a {
+                    font: {
+                        family: $sourceCodeProFont;
+                        size: 25px;
+                    }
+                    color: $plainBlackColor;
+                    text-decoration: none;
+                    padding: 5px 20px;
+                    transition: $headerItemsTransition;
+
+                    &:hover,
+                    &:active {
+                        color: $bodyBackgroundColor;
+                        background: $headerTopBorder;
+                        border-radius: 40px;
+                        transition: $headerItemsTransition;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+// Footer
+
+.main-footer {
+    border-top: 3px solid white;
+    height: 150px;
+    @include displayFlexMixin(null, null, center, center);
+
+    &__nav {
+        width: 20%;
+
+        &-list {
+            @include displayFlexMixin(null, wrap, space-around);
+            padding: 0;
+            margin: 15px 0;
+            list-style-type: none;
+
+            li {
+                a {
+                    color: $plainBlackColor;
+                    font: {
+                        size: 18px;
+                        family: $sourceCodeProFont;
+                    }
+                    text-decoration: none;
+
+                    &:hover {
+                        cursor: pointer;
+                        text-shadow: 2px 2px 2px #ddd7d6;
+                        font-size: 18.5px;
+                        transition: $headerItemsTransition;
+                    }
+
+                }
+            }
+
+            @media only screen and (max-width: $tabletSize) {
+                justify-content: space-evenly;
+            }
+
+        }
+
+        &-social-icons {
+            padding: 0;
+            margin: 0;
+            margin-top: 15px;
+            @include displayFlexMixin(null, wrap, space-evenly, center);
+
+            .fa {
+                @include displayFlexMixin(null, null, center, center);
+                padding: 20px;
+                font-size: 20px;
+                width: 20px;
+                height: 20px;
+                margin-bottom: 5px;
+                text: {
+                    align: center; 
+                    decoration: none;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+                
+            }
+
+            // Facebook
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+            
+            /* Twitter */
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+            }
+            
+            /* Linkedin */
+            .fa-linkedin {
+                background: #0A66C2;
+                color: white;
+            }
+
+        }
+
+        @media only screen and (max-width: $tabletSize) {
+            width: 80%;
+        }
+           
+    }
+
+}

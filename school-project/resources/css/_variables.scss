@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Source+Code+Pro&display=swap');
+
+// Fonts
+$courierPrimeFont: 'Courier Prime', monospace;
+$sourceCodeProFont: 'Source Code Pro', monospace;
+
+// Colors
+$bodyBackgroundColor: #fef9f8;
+$headerTopBorder: #ef9273;
+$plainBlackColor: black;
+$peachColor: #eb9a7f;
+$mainTitleShadowColor: #ddd7d6;
+
+// Transitions
+$headerItemsTransition: 0.2s ease-in-out;
+
+// Shadows
+$mainTitleShadow: 3px 3px 3px $mainTitleShadowColor;
+$formFieldsShadow: 3px 3px 3px #e9baab;
+
+// Dimensions
+$mobileSize: 600px;
+$tabletSize: 768px;
+$laptopSize: 1400px;

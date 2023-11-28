@@ -1,0 +1,159 @@
+@import './enrollment.scss';
+
+main {
+    padding: {
+        top: 20px;
+        bottom: 40px;
+    }
+    background: linear-gradient(135deg, #e9bbab 10%, #ecc8bc);
+}
+
+.team-wrapper {
+    margin: 0 auto;
+    width: 80%;
+
+    &__teacher {
+        @include displayFlexMixin(null, wrap, space-around, center);
+        margin-bottom: 80px;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+            @media screen and (max-width: $tabletSize) {
+                text-align: right;
+            }
+        }
+        &:nth-child(odd) {
+            @media screen and (max-width: $tabletSize) {
+                text-align: left;
+            }
+        }
+        
+        @media screen and (max-width: $tabletSize) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        &-img img {
+            @media screen and (max-width: $tabletSize) {
+                width: 100%;
+                box-shadow: 6px 6px 5px $plainBlackColor;
+            }
+        }
+    }
+
+    &__teacher-about {
+        width: 40%;
+
+        &-icons {
+            @include displayFlexMixin(null, wrap, center, stretch);
+
+            .fa-pinterest {
+                background: #E60023;
+                color: white;
+                
+            }
+
+            .fa-linkedin {
+                background: white;
+            }
+            
+            .fa-pinterest,
+            .fa-linkedin {
+                width: 40px;
+                height: 40px;
+                @include displayFlexMixin(null, null, center, center);
+                font: {
+                    size: 22px;
+                }
+            }
+
+        }
+
+        .odd-icons {
+            @media screen and (max-width: $tabletSize) {
+                justify-content: flex-start;
+            }
+        }
+
+        .even-icons {
+            @media screen and (max-width: $tabletSize) {
+                justify-content: flex-end;
+            }
+        }
+
+        h1, h3 {
+            text-shadow: 4px 4px 4px #d47675;
+        }
+
+        p {
+            font-family: $courierPrimeFont;
+            text-shadow: 2px 2px 3px #d47675;
+        }
+
+        @media screen and (max-width: $tabletSize) {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width: $tabletSize) {
+        width: 90%;
+    }
+}
+
+.team-title-wrapper {
+    text-align: center;
+    margin-top: 50px 0;
+    font-family: $sourceCodeProFont;
+
+    &__title {
+        margin-bottom: 40px;
+        font-size: 40px;
+        text-shadow: $mainTitleShadow;
+    }
+}
+
+.form-wrapper {
+    background: none;
+    width: 50%;
+    margin: 0 auto;
+
+    p {
+        width: 70%;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: $tabletSize) {
+            width: 80%;
+        }
+    }
+
+    label {
+        align-self: flex-start;
+
+        @media screen and (max-width: $tabletSize) {
+            text-shadow: 2px 2px #eb9a7f;
+            color: $plainBlackColor;
+        }
+        
+    }
+
+    h3 {
+        color: $plainBlackColor;
+        text-shadow: $mainTitleShadow;
+
+        @media screen and (max-width: $tabletSize) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__form {
+        @media screen and (max-width: $tabletSize) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $tabletSize) {
+        background: none;
+        width: 90%;
+    }
+}

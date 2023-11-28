@@ -1,233 +1,354 @@
-@import url('./shared.css');
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Source+Code+Pro&display=swap");
+* {
+  box-sizing: border-box;
+}
 
-/* ! MAIN SECTION */
+body {
+  margin: 0;
+  background-color: #fef9f8;
+}
+
+/* ! Header */
+.main-header {
+  border-top: 10px solid #ef9273;
+  border-bottom: 5px solid #fff;
+  padding: 20px;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.main-header__logo-wrapper {
+  font-family: "Source Code Pro", monospace;
+  font-weight: bolder;
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 510px);
+}
+.main-header__logo-wrapper a {
+  text-decoration: none;
+  color: black;
+}
+.main-header__logo-wrapper a img {
+  width: 60px;
+  height: 60px;
+}
+.main-header__main-nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-header__main-nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.main-header__main-nav-list-item {
+  display: inline-block;
+}
+.main-header__main-nav-list-item a {
+  font-family: "Source Code Pro", monospace;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  padding: 5px 20px;
+  transition: 0.2s ease-in-out;
+}
+.main-header__main-nav-list-item a:hover, .main-header__main-nav-list-item a:active {
+  color: #fef9f8;
+  background: #ef9273;
+  border-radius: 40px;
+  transition: 0.2s ease-in-out;
+}
+
+.main-footer {
+  border-top: 3px solid white;
+  height: 150px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.main-footer__nav {
+  width: 20%;
+}
+.main-footer__nav-list {
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  padding: 0;
+  margin: 15px 0;
+  list-style-type: none;
+}
+.main-footer__nav-list li a {
+  color: black;
+  font-size: 18px;
+  font-family: "Source Code Pro", monospace;
+  text-decoration: none;
+}
+.main-footer__nav-list li a:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #ddd7d6;
+  font-size: 18.5px;
+  transition: 0.2s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+  .main-footer__nav-list {
+    justify-content: space-evenly;
+  }
+}
+.main-footer__nav-social-icons {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  /* Twitter */
+  /* Linkedin */
+}
+.main-footer__nav-social-icons .fa {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+.main-footer__nav-social-icons .fa:hover {
+  opacity: 0.7;
+}
+.main-footer__nav-social-icons .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.main-footer__nav-social-icons .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.main-footer__nav-social-icons .fa-linkedin {
+  background: #0A66C2;
+  color: white;
+}
+@media only screen and (max-width: 768px) {
+  .main-footer__nav {
+    width: 80%;
+  }
+}
 
 .hero-wrapper {
-    font-family: 'Courier Prime', monospace;
-    height: 70vh;
-    padding: 20px;
-    background-image: url('../images/hero-image.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+  font-family: "Courier Prime", monospace;
+  height: 70vh;
+  padding: 20px;
+  background-image: url("../images/hero-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 .hero-wrapper h1 {
-    letter-spacing: 5px; /* definisanje razmaka izmedju slova */
-    text-shadow: 2px 2px 1px #eb9a7f; /* text-shadow je shorthand property koji prihvata redosledno: senku po X osi, senku po Y osi, blur (zamagljenje), boja */
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 1px #eb9a7f;
 }
-
 .hero-wrapper p {
-    width: 50%;
-    letter-spacing: 2px;
-    font-style: italic;
+  width: 50%;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+@media only screen and (max-width: 600px) {
+  .hero-wrapper p {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero-wrapper {
+    display: flex !important;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .plans-wrapper {
-    width: 90%;
-    margin: 50px auto; /* za centriranje content-a */
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
-    font-family: 'Courier Prime', monospace;
+  width: 90%;
+  margin: 50px auto;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Courier Prime", monospace;
 }
-
 .plans-wrapper__title {
-    flex-basis: 100%;
-    text-align: center;
-    font-size: 42px;
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 42px;
 }
-
 .plans-wrapper__article {
-    border: 3px solid black;
-    padding: 50px 35px;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    min-width: 350px;
-    background: #e9baab;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    flex-basis: 20%;
-    text-align: center;
-    max-height: 650px;
-    box-shadow: 5px 4px 5px 5px rgb(151, 150, 150);
+  border: 3px solid black;
+  padding: 50px 35px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  min-width: 350px;
+  background: #f2bdab;
+  display: flex !important;
+  flex-flow: column;
+  align-items: center;
+  flex-basis: 20%;
+  text-align: center;
+  max-height: 650px;
+  box-shadow: 5px 4px 5px 5px rgb(151, 150, 150);
 }
-
-.advanced {
-    order: 1;
-    min-height: 700px;
-    background: #eb9a7f;
-}
-
-.intermediate {
-    order: 2;
-}
-
 .plans-wrapper__article h1 {
-    letter-spacing: 3px;
-    text-shadow: 3px 3px #ddd7d6;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 3px #ddd7d6;
 }
-
 .plans-wrapper__article h1:nth-child(1) {
-    font-size: 35px;
-    font-weight: bolder;
-    text-transform: uppercase;
+  font-size: 35px;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
-
 .plans-wrapper__article h1:nth-child(2) {
-    font-weight: bold;
-    font-size: 27px;
-    text-decoration: underline;
-    text-underline-offset: 6px;
+  font-weight: bold;
+  font-size: 27px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
-
 .plans-wrapper__article h2,
 .plans-wrapper__article h3 {
-    text-shadow: 3px 3px 3px #ddd7d6;
+  text-shadow: 3px 3px 3px #ddd7d6;
 }
-
 .plans-wrapper__article h3 {
-    font-size: 23px;
+  font-size: 23px;
 }
-
 .plans-wrapper__article ul {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 19px;
-    font-weight: bold;
-    list-style-type: none;
-    text-align: left;
+  font-family: "Source Code Pro", monospace;
+  font-size: 19px;
+  font-weight: bold;
+  list-style-type: none;
+  text-align: left;
 }
-
-.choose-plan__button-wrapper {
-    margin-top: 20px;
+.plans-wrapper__article .choose-plan__button-wrapper {
+  margin-top: 20px;
 }
-
-.choose-plan__button-wrapper button {
-    font-family: 'Courier Prime', monospace;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px 25px;
-    font-size: 19px;
-    background-color: #fef9f8;
+.plans-wrapper__article .choose-plan__button-wrapper button {
+  font-family: "Courier Prime", monospace;
+  font-size: 19px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background-color: #fef9f8;
 }
-
-.choose-plan__button-wrapper button:hover {
-    background-color: #ddd7d6;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+.plans-wrapper__article .choose-plan__button-wrapper button:hover {
+  background-color: #ddd7d6;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.plans-wrapper .advanced {
+  order: 1;
+  min-height: 700px;
+  background: #e99072;
+}
+.plans-wrapper .intermediate {
+  order: 2;
 }
 
 .about-wrapper {
-    margin-top: 100px;
-    padding: 50px 0;
-    background-color: #eb9a7f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: #eb9a7f;
+  display: flex !important;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
 }
-
 .about-wrapper__title {
-    font-family: 'Courier Prime', monospace;
-    font-size: 45px;
-    letter-spacing: 5px;
-    text-shadow: 3px 3px 3px #ddd7d6;
+  font-family: "Courier Prime", monospace;
+  font-size: 45px;
+  letter-spacing: 5px;
+  text-shadow: 3px 3px 3px #ddd7d6;
 }
-
+@media only screen and (max-width: 768px) {
+  .about-wrapper__title {
+    font-size: 36px;
+  }
+}
 .about-wrapper__text {
-    width: 50%;
-    font-family: 'Courier Prime', monospace;
-    font-size: 22px;
-    text-shadow: 1px 1px 3px #ddd7d6;
-    text-align: justify;
+  width: 50%;
+  font-family: "Courier Prime", monospace;
+  font-size: 22px;
+  text-shadow: 3px 3px 3px #ddd7d6;
+  text-align: justify;
 }
-
 .about-wrapper__text p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
-
+@media only screen and (max-width: 768px) {
+  .about-wrapper__text {
+    width: 80%;
+    font-size: 18px;
+  }
+}
 .about-wrapper__founders {
-    width: 70%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 70%;
+  display: flex !important;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
 .about-wrapper__founders-card {
-    flex-basis: 550px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-basis: 550px;
+  margin-top: 50px;
+  display: flex !important;
+  flex-flow: column;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .about-wrapper__founders-card img {
-    border: 3px solid #e9baab;
-    border-radius: 25px;
-    box-shadow: 5px 4px 5px 5px rgb(54, 54, 54);
+  border: 3px solid #e88969;
+  border-radius: 25px;
+  box-shadow: 5px 4px 5px 5px rgb(54, 54, 54);
 }
-
+@media only screen and (max-width: 768px) {
+  .about-wrapper__founders-card img {
+    width: 300px;
+    height: 300px;
+  }
+}
 .about-wrapper__founders-card h1,
 .about-wrapper__founders-card h3,
 .about-wrapper__founders-card p {
-    font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
-
 .about-wrapper__founders-card h1 {
-    font-size: 35px;
-    text-shadow: 2px 2px #ddd7d6;
+  font-size: 35px;
+  text-shadow: 3px 3px 3px #ddd7d6;
 }
-
 .about-wrapper__founders-card h3 {
-    font-size: 25px;
-    text-shadow: 3px 3px 3px #ddd7d6;
+  font-size: 25px;
+  text-shadow: 3px 3px 3px #ddd7d6;
 }
-
-.about-wrapper__founders-card p {
-    width: 75%;
-    text-align: center;
-    line-height: 1.3;
-    font-size: 18px;
-    text-shadow: 2px 2px 2px #ddd7d6;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .hero-wrapper {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-wrapper p {
-        width: 80%;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-    .about-wrapper__title {
-        font-size: 36px;
-    }
-
-    .about-wrapper__text {
-        width: 80%;
-        font-size: 18px;
-    }
-
-    .about-wrapper__founders-card img {
-        width: 300px;
-        height: 300px;
-    }
-
-    .about-wrapper__founders-card h3 {
-        text-align: center;
-    }
-
-    .about-wrapper__founders-card p {
-        width: 90%;
-    }
+  .about-wrapper__founders-card h3 {
+    text-align: center;
+  }
 }
+.about-wrapper__founders-card p {
+  width: 75%;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 18px;
+  text-shadow: 3px 3px 3px #ddd7d6;
+}
+@media only screen and (max-width: 768px) {
+  .about-wrapper__founders-card p {
+    width: 90%;
+  }
+}/*# sourceMappingURL=styles.css.map */

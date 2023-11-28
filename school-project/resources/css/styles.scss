@@ -1,0 +1,242 @@
+@import './shared';
+
+// Main Section
+
+.hero-wrapper {
+    font-family: $courierPrimeFont;
+    height: 70vh;
+    padding: 20px;
+    background: {
+        image: url('../images/hero-image.png');
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    h1 {
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 1px $peachColor;
+    }
+
+    p {
+        width: 50%;
+        letter-spacing: 2px;
+        font-style: italic;
+
+        @media only screen and (max-width: $mobileSize) {
+            width: 80%;
+        }    
+
+    }
+
+    @media only screen and (max-width: $mobileSize) {
+        @include displayFlexMixin(column, null, null, center);
+        text-align: center;
+    }
+
+}
+
+.plans-wrapper {
+    width: 90%;
+    margin: 50px auto;
+    @include displayFlexMixin(null, wrap, space-around, center);
+    font-family: $courierPrimeFont;
+
+    &__title {
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 42px;
+    }
+
+    &__article {
+        border: 3px solid $plainBlackColor;
+        padding: 50px 35px;
+        border-radius: 25px;
+        margin-bottom: 20px;
+        min-width: 350px;
+        background: lighten($peachColor, 10%);
+        @include displayFlexMixin(column, null, null, center);
+        flex-basis: 20%;
+        text-align: center;
+        max-height: 650px;
+        box-shadow: 5px 4px 5px 5px rgb(151, 150, 150);
+
+        h1 {
+            letter-spacing: 3px;
+            text-shadow: $mainTitleShadow;
+
+            &:nth-child(1) {
+                font: {
+                    size: 35px;
+                    weight: bolder;
+                }
+                text-transform: uppercase;
+            }
+
+            &:nth-child(2) {
+                font: {
+                    weight: bold;
+                    size: 27px;
+                }
+                text-decoration: underline;
+                text-underline-offset: 6px;
+            }
+
+        }
+
+        h2,
+        h3 {
+            text-shadow: $mainTitleShadow;
+        }
+
+        h3 {
+            font-size: 23px;
+        }
+
+        ul {
+            font: {
+                family: $sourceCodeProFont;
+                size: 19px;
+                weight: bold;
+            }
+            list-style-type: none;
+            text-align: left;
+        }
+
+        .choose-plan__button-wrapper {
+            margin-top: 20px;
+
+            button {
+                font: {
+                    family: $courierPrimeFont;
+                    size: 19px;
+                }
+                border: 2px solid $plainBlackColor;
+                border-radius: 10px;
+                padding: 10px 25px;
+                background-color: $bodyBackgroundColor;
+
+                &:hover {
+                    background-color: $mainTitleShadowColor;
+                    cursor: pointer;
+                    transition: $headerItemsTransition;
+                }
+
+            }
+
+        }
+
+    }
+
+    .advanced {
+        order: 1;
+        min-height: 700px;
+        background: darken($peachColor, 3%);
+    }
+    
+    .intermediate {
+        order: 2;
+    }
+
+}
+
+.about-wrapper {
+    margin-top: 100px;
+    padding: 50px 0;
+    background-color: $peachColor;
+    @include displayFlexMixin(column, null, space-around, center);
+
+    &__title {
+        font: {
+            family: $courierPrimeFont;  
+            size: 45px;
+        }
+        letter-spacing: 5px;
+        text-shadow: $mainTitleShadow;
+
+        @media only screen and (max-width: $tabletSize) {
+            font-size: 36px;
+        }
+
+    }
+
+    &__text {
+        width: 50%;
+        font: {
+            family: $courierPrimeFont;
+            size: 22px;
+        }
+        text: {
+            shadow:$mainTitleShadow;
+            align: justify;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        @media only screen and (max-width: $tabletSize) {
+            width: 80%;
+            font-size: 18px;
+        }
+
+    }
+
+    &__founders {
+        width: 70%;
+        @include displayFlexMixin(null, wrap, space-evenly, center);
+
+        &-card {
+            flex-basis: 550px;
+            margin-top: 50px;
+            @include displayFlexMixin(column, null, null, center);
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                border: 3px solid darken($peachColor, 5%);
+                border-radius: 25px;
+                box-shadow: 5px 4px 5px 5px rgb(54, 54, 54);
+
+                @media only screen and (max-width: $tabletSize) {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            h1,
+            h3,
+            p {
+                font-family: $sourceCodeProFont;
+            }
+
+            h1 {
+                font-size: 35px;
+                text-shadow: $mainTitleShadow;
+            }
+
+            h3 {
+                font-size: 25px;
+                text-shadow: $mainTitleShadow;
+
+                @media only screen and (max-width: $tabletSize) {
+                    text-align: center;
+                }
+            }
+
+            p {
+                width: 75%;
+                text-align: center;
+                line-height: 1.3;
+                font-size: 18px;
+                text-shadow: $mainTitleShadow;
+
+                @media only screen and (max-width: $tabletSize) {
+                    width: 90%;
+                }
+            }
+
+        }
+
+    }
+    
+}
