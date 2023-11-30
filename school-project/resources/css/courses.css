@@ -159,7 +159,7 @@ body {
   width: 50%;
   background-color: #fef9f9;
   padding: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   opacity: 85%;
   min-width: 300px;
   min-height: 250px;
@@ -231,6 +231,11 @@ body {
 .courses-wrapper .intermediate-course {
   order: 2;
   align-self: flex-end;
+  transform: translateX(1) scale(1, 1);
+  transition: 1s ease;
+}
+.courses-wrapper .intermediate-course:hover {
+  transform: translateX(-50%) scale(1.2, 1.2);
 }
 @media only screen and (max-width: 600px) {
   .courses-wrapper .intermediate-course {
@@ -239,6 +244,15 @@ body {
 }
 .courses-wrapper .basic-course {
   order: 3;
+}
+.courses-wrapper .advanced-course,
+.courses-wrapper .basic-course {
+  transform: translateX(1) scale(1, 1);
+  transition: 1s ease;
+}
+.courses-wrapper .advanced-course:hover,
+.courses-wrapper .basic-course:hover {
+  transform: translateX(50%) scale(1.2, 1.2);
 }
 @media only screen and (max-width: 600px) {
   .courses-wrapper {

@@ -34,7 +34,16 @@ main {
             margin-bottom: 50px;
         }
 
+        &-img {
+            transform: skewX(-5deg);
+            
+            @media screen and (max-width: $mobileSize) {
+                transform: none;
+            }
+        }
+
         &-img img {
+            box-shadow: 8px 8px 5px black;
             @media screen and (max-width: $tabletSize) {
                 width: 100%;
                 box-shadow: 6px 6px 5px $plainBlackColor;
@@ -117,6 +126,7 @@ main {
     background: none;
     width: 50%;
     margin: 0 auto;
+    padding: 0;
 
     p {
         width: 70%;

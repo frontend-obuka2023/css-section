@@ -28,9 +28,20 @@
 
     }
 
+    animation: {
+        name: slider;
+        duration: 15s;
+        iteration-count: infinite;
+        timing-function: ease-in-out;
+    }
+
     @media only screen and (max-width: $mobileSize) {
         @include displayFlexMixin(column, null, null, center);
         text-align: center;
+    }
+
+    @media only screen and (max-width: $laptopSize) {
+        animation: none;
     }
 
 }
@@ -239,4 +250,19 @@
 
     }
     
+}
+
+@keyframes slider {
+    0% {
+        background-image: url('../images/hero-image.png');
+    }
+    33% {
+        background-image: url('../images/hero-image2.png');
+    }
+    66% {
+        background-image: url('../images/hero-image3.png');
+    }
+    100% {
+        background-image: url('../images/hero-image.png');
+    }
 }

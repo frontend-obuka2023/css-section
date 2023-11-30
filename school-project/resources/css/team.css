@@ -276,6 +276,17 @@ main {
     margin-bottom: 50px;
   }
 }
+.team-wrapper__teacher-img {
+  transform: skewX(-5deg);
+}
+@media screen and (max-width: 600px) {
+  .team-wrapper__teacher-img {
+    transform: none;
+  }
+}
+.team-wrapper__teacher-img img {
+  box-shadow: 8px 8px 5px black;
+}
 @media screen and (max-width: 768px) {
   .team-wrapper__teacher-img img {
     width: 100%;
@@ -350,6 +361,7 @@ main {
   background: none;
   width: 50%;
   margin: 0 auto;
+  padding: 0;
 }
 .form-wrapper p {
   width: 70%;

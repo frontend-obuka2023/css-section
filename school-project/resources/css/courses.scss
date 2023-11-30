@@ -15,7 +15,7 @@
         width: 50%;
         background-color: #fef9f9;
         padding: 25px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         opacity: 85%;
         min-width: 300px;
         min-height: 250px;
@@ -100,6 +100,13 @@
         order: 2;
         align-self: flex-end;
 
+        transform: translateX(1) scale(1, 1);
+        transition: 1s ease;
+        
+        &:hover {
+            transform: translateX(-50%) scale(1.2, 1.2);
+        }
+
         @media only screen and (max-width: $mobileSize) {
             align-self: center;
         }
@@ -107,6 +114,17 @@
     
     .basic-course {
         order: 3;
+    }
+
+    .advanced-course,
+    .basic-course {
+        transform: translateX(1) scale(1, 1);
+        transition: 1s ease;
+        
+        &:hover {
+            transform: translateX(50%) scale(1.2, 1.2);
+        }
+
     }
 
     @media only screen and (max-width: $mobileSize) {

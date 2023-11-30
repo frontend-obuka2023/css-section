@@ -152,6 +152,10 @@ body {
   background-image: url("../images/hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
+  animation-name: slider;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .hero-wrapper h1 {
   letter-spacing: 5px;
@@ -173,6 +177,11 @@ body {
     flex-flow: column;
     align-items: center;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .hero-wrapper {
+    animation: none;
   }
 }
 
@@ -350,5 +359,20 @@ body {
 @media only screen and (max-width: 768px) {
   .about-wrapper__founders-card p {
     width: 90%;
+  }
+}
+
+@keyframes slider {
+  0% {
+    background-image: url("../images/hero-image.png");
+  }
+  33% {
+    background-image: url("../images/hero-image2.png");
+  }
+  66% {
+    background-image: url("../images/hero-image3.png");
+  }
+  100% {
+    background-image: url("../images/hero-image.png");
   }
 }/*# sourceMappingURL=styles.css.map */
