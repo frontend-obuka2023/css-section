@@ -252,6 +252,18 @@
     
 }
 
+.go-to-top-wrapper {
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        font-family: $sourceCodeProFont;
+    }
+}
+
 @keyframes slider {
     0% {
         background-image: url('../images/hero-image.png');

@@ -10,15 +10,37 @@ body {
     background-color: $bodyBackgroundColor;
 }
 
+.hamburger-icon {
+    color: $headerTopBorder;
+    font-size: 30px;
+    margin-left: 5px;
+    @media screen and (min-width: $tabletSize) {
+        display: none;
+    }
+}
+
+.closed {
+    display: none !important;
+}
 /* ! Header */
 
 .main-header {
     border-top: 10px solid $headerTopBorder;
     border-bottom: 5px solid #fff;
     padding: 20px;
-    @include displayFlexMixin(null, wrap, center, center);
+    // @include displayFlexMixin(null, wrap, center, center);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $tabletSize) {
+        height: 300px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 
     &__logo-wrapper {
+        
         font: {
             family: $sourceCodeProFont;
             weight: bolder;
@@ -39,6 +61,11 @@ body {
 
         }
 
+        @media only screen and (max-width: $tabletSize) {
+            margin: 0 auto;
+            width: auto;
+        }
+
     }
 
     &__main-nav {
@@ -50,6 +77,13 @@ body {
             padding: 0;
             margin: 0;
             @include displayFlexMixin(null, wrap, space-between);
+
+            @media only screen and (max-width: $tabletSize) {
+                height: 150px;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
 
             &-item {
                 display: inline-block;

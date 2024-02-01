@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/styles.css">
+    <script src="./resources/js/app.js" defer></script>
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Home Page</title>
 </head>
-<body>
+<body id="page-start">
     <!-- ! Header -->
-    <header class="main-header">
+    <a href="javascript:void(0)" class="hamburger-icon js-hamburger-icon" onclick="toggleHeader()">
+        <i class="fa fa-bars"></i>
+    </a>
+    <header class="main-header js-main-header">
         <div class="main-header__logo-wrapper">
             <a href="index.html">
                 <img src="./resources/images/logo.png" alt="Company Logo">
@@ -110,6 +114,9 @@
                     </p>
                 </article>
             </div>
+        </div>
+        <div class="go-to-top-wrapper">
+            <a href="#page-start">Go to top</a>
         </div>
     </main>
     <!-- ! Footer -->
